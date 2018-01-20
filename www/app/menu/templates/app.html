@@ -1,0 +1,3 @@
+<div ng-if="!isMenuless && data.menu == 'tabs'" class="tabs-menu"><ion-nav-view name="tabs"></ion-nav-view></div>
+<div ng-if="!isMenuless && data.menu == 'side'"><ion-nav-view name="side"></ion-nav-view></div>
+<div ng-if="isMenuless"><ion-nav-view name="nomenu"></ion-nav-view></div>

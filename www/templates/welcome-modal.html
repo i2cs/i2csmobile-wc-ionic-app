@@ -1,0 +1,18 @@
+<ion-modal-view>
+    <ion-content>
+        <button class="button button-clear button-positive" ng-click="closeWelcomeModal();" i18n="modals.button_close"></button>
+
+        <ion-slide-box show-pager="true" does-continue="true">
+            <ion-slide ng-repeat="w in ::welcome">
+                <img width="100%" preload-image ng-src="{{::w.image}}" default-image="app/shop/images/placeholder.png" fallback-image="app/shop/images/placeholder.png" />
+
+                <center>
+                    <h1 ng-bind="::w.title"></h1>
+                    <p ng-bind-html="::w.text"></p>
+                </center>
+                <div><br /><br /><br /></div>
+            </ion-slide>
+        </ion-slide-box>
+
+    </ion-content>
+</ion-modal-view>

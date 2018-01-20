@@ -1,0 +1,208 @@
+<h1><code ng:non-bindable="">CartService</code>
+<div><span class="hint">service in module <code ng:non-bindable="">cart.module</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="cart-module-cartservice-page"><p>This service class contains methods needed from add an item to the cart upto checkout with online purchase.</p>
+</div></div>
+<h2 id="dependencies">Dependencies</h2>
+<ul class="dependencies"><li><code ng:non-bindable=""><a href="#/api/ng.$q">$q</a></code>
+</li>
+<li><code ng:non-bindable=""><a href="#/api/dateService">dateService</a></code>
+</li>
+</ul>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addorder">AddOrder(order)</h3>
+<div class="addorder"><div class="shop-module-cartservice-addorder-page"><p>Adds a new order to with the current items in the cart session.</p>
+</div><h5 id="methods_addorder_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>order</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="shop-module-cartservice-addorder-page"><p>The order object</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>shipping_method</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Shipping method if previously not set</p>
+</div></td></tr><tr><td>payment_method</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Payment method if previously not set</p>
+</div></td></tr><tr><td>order_comments</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Additional comment for the Order</p>
+</div></td></tr><tr><td>payment_method</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Payment method</p>
+</div></td></tr><tr><td>shipping_method</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Shipping method</p>
+</div></td></tr><tr><td>billing_first_name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>First name</p>
+</div></td></tr><tr><td>billing_last_name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Last name</p>
+</div></td></tr><tr><td>billing_company</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Company name</p>
+</div></td></tr><tr><td>billing_email</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Email address</p>
+</div></td></tr><tr><td>billing_phone</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Phone</p>
+</div></td></tr><tr><td>billing_country</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Country</p>
+</div></td></tr><tr><td>billing_address_1</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Address line 1</p>
+</div></td></tr><tr><td>billing_address_2</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Address line 2</p>
+</div></td></tr><tr><td>billing_city</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>City</p>
+</div></td></tr><tr><td>billing_state</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>State</p>
+</div></td></tr><tr><td>billing_postcode</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Postcode</p>
+</div></td></tr><tr><td>order_comments</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Comments</p>
+</div></td></tr></tbody></table></td></tr></tbody></table><h5 id="methods_addorder_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="shop-module-cartservice-addorder-page"><p>Promise of the API call</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_addtocart">AddToCart(product_id, quantity, depricated, variation_object)</h3>
+<div class="addtocart"><div class="shop-module-cartservice-addtocart-page"><p>Adds an item to the cart.</p>
+</div><h5 id="methods_addtocart_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>product_id</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="shop-module-cartservice-addtocart-page"><p>Product id</p>
+</div></td></tr><tr><td>quantity</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="shop-module-cartservice-addtocart-page"><p>Quantity</p>
+</div></td></tr><tr><td>depricated</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="shop-module-cartservice-addtocart-page"><p>Depricated field</p>
+</div></td></tr><tr><td>variation_object</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="shop-module-cartservice-addtocart-page"><p>Variation object</p>
+</div></td></tr></tbody></table><h5 id="methods_addtocart_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="shop-module-cartservice-addtocart-page"><p>Returns a promise of the cart object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_applycoupon">ApplyCoupon(coupon)</h3>
+<div class="applycoupon"><div class="shop-module-cartservice-applycoupon-page"><p>Apply coupon to the shopping cart</p>
+</div><h5 id="methods_applycoupon_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>coupon</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-applycoupon-page"><p>Coupon number or string</p>
+</div></td></tr></tbody></table><h5 id="methods_applycoupon_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="shop-module-cartservice-applycoupon-page"><p>Returns a promise of the update response</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getcart">GetCart()</h3>
+<div class="getcart"><div class="shop-module-cartservice-getcart-page"><p>Returns the cart object</p>
+</div><h5 id="methods_getcart_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="shop-module-cartservice-getcart-page"><p>Returns a promise of the cart object</p>
+</div></td></tr></table><h4 id="methods_getcart_example">Example</h4>
+<div class="example"><div class="shop-module-cartservice-getcart-page"><pre class="prettyprint linenums">
+CartService.GetCart().then(function (data) {
+   $scope.cart = data;
+});
+</pre>
+Resolved Object
+<pre class="prettyprint linenums">
+{
+ "total_item_count": 2,
+ "products": [
+   {
+     "0": "USD",
+     "1": "USD",
+     "cart_id": "7",
+     "product_id": "43",
+     "name": "MacBook",
+     "model": "Product 16",
+     "thumb": "full_image_path75x75.jpg",
+     "option": [],
+     "quantity": "2",
+     "stock": true,
+     "shipping": "0",
+     "price": "$602.00",
+     "total": "$1,204.00",
+     "price_clean": 602,
+     "total_clean": 1204,
+     "reward": 1200
+   }
+ ],
+ "vouchers": [],
+ "totals": [
+   {
+     "title": "Sub-Total",
+     "text": "$1,000.00"
+   },
+   {
+     "title": "Eco Tax (-2.00)",
+     "text": "$4.00"
+   },
+   {
+     "title": "VAT (20%)",
+     "text": "$200.00"
+   },
+   {
+     "title": "Total",
+     "text": "$1,204.00"
+   }
+ ],
+ "currency": "USD",
+ "total_amount" : "$1,204.00",
+ "total_amount_clean" : 1204
+}
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_getpaymentmethods">GetPaymentMethods()</h3>
+<div class="getpaymentmethods"><div class="shop-module-cartservice-getpaymentmethods-page"><p>Returns available payment methods depending on the shipping selection</p>
+</div><h5 id="methods_getpaymentmethods_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="shop-module-cartservice-getpaymentmethods-page"><p>Returns a promise of the array of payment method objects</p>
+</div></td></tr></table><h4 id="methods_getpaymentmethods_example">Example</h4>
+<div class="example"><div class="shop-module-cartservice-getpaymentmethods-page"><pre class="prettyprint linenums">
+CartService.GetPaymentMethods().then(function (data) {
+    $scope.paymentMethods = data;
+});
+</pre>
+Resolved Object
+<pre class="prettyprint linenums">
+{ 
+as_array : [{
+    "code":"cod",
+    "title":"Cash On Delivery",
+    "terms":"",
+    "sort_order":"5"
+ }],
+ settings : {
+ }
+}
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_getshippingmethods">GetShippingMethods()</h3>
+<div class="getshippingmethods"><div class="shop-module-cartservice-getshippingmethods-page"><p>Returns available shipping methods for the current cart and customer</p>
+</div><h5 id="methods_getshippingmethods_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="shop-module-cartservice-getshippingmethods-page"><p>Returns a promise of the array of shipping method objects</p>
+</div></td></tr></table><h4 id="methods_getshippingmethods_example">Example</h4>
+<div class="example"><div class="shop-module-cartservice-getshippingmethods-page"><pre class="prettyprint linenums">
+CartService.GetShippingMethods().then(function (data) {
+    $scope.shippingMethods = data;
+});
+</pre>
+Resolved Object
+<pre class="prettyprint linenums">
+[{
+ "code":"flat.flat",
+ "title":"Flat Shipping Rate",
+ "cost":"5.00",
+ "tax_class_id":"9",
+ "text":"$5.00",
+ "method":"flat",
+ "main_title":"Flat Rate"
+}]
+</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_loadzones">LoadZones(country_id)</h3>
+<div class="loadzones"><div class="shop-module-cartservice-loadzones-page"><p>Returns an array of zone objects relevent to a country</p>
+</div><h5 id="methods_loadzones_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>country_id</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="shop-module-cartservice-loadzones-page"><p>Selected country code</p>
+</div></td></tr></tbody></table><h5 id="methods_loadzones_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="shop-module-cartservice-loadzones-page"><p>Returns a promise of the array of zone objects</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_removecartitem">RemoveCartItem(id)</h3>
+<div class="removecartitem"><div class="shop-module-cartservice-removecartitem-page"><p>Removes an item from the cart</p>
+</div><h5 id="methods_removecartitem_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="shop-module-cartservice-removecartitem-page"><p>Cart item id. <code>cart_key</code> is the key given for each cart item. See <code>cart/</code> to find the <code>cart_key</code></p>
+</div></td></tr></tbody></table><h5 id="methods_removecartitem_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="shop-module-cartservice-removecartitem-page"><p>Returns a promise of the update response</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_savepaymentmethod">SavePaymentMethod(info)</h3>
+<div class="savepaymentmethod"><div class="shop-module-cartservice-savepaymentmethod-page"><p>Sets payment method for the shopping cart</p>
+</div><h5 id="methods_savepaymentmethod_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>info</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="shop-module-cartservice-savepaymentmethod-page"><p>User selected payment method</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>payment_method</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-savepaymentmethod-page"><p>Payment method code, ex : <code>bacs</code></p>
+</div></td></tr></tbody></table></td></tr></tbody></table><h5 id="methods_savepaymentmethod_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="shop-module-cartservice-savepaymentmethod-page"><p>Returns a promise of the update response</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_saveshippingmethod">SaveShippingMethod(info)</h3>
+<div class="saveshippingmethod"><div class="shop-module-cartservice-saveshippingmethod-page"><p>Sets shipping method for the shopping cart</p>
+</div><h5 id="methods_saveshippingmethod_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>info</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="shop-module-cartservice-saveshippingmethod-page"><p>User selected shipping method</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>shipping_method</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-saveshippingmethod-page"><p>Shipping method code, ex : <code>flat_rate:1</code></p>
+</div></td></tr></tbody></table></td></tr></tbody></table><h5 id="methods_saveshippingmethod_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="shop-module-cartservice-saveshippingmethod-page"><p>Returns a promise of the update response</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_setshippingaddress">SetShippingAddress(address)</h3>
+<div class="setshippingaddress"><div class="shop-module-cartservice-setshippingaddress-page"><p>Saves user shipping address</p>
+</div><h5 id="methods_setshippingaddress_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>address</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="shop-module-cartservice-setshippingaddress-page"><p>Personal info object with shipping address info</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>city</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-setshippingaddress-page"><p>Address City. must be between 2 and 128 characters</p>
+</div></td></tr><tr><td>postcode</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="shop-module-cartservice-setshippingaddress-page"><p>Postal code</p>
+</div></td></tr><tr><td>country_id</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="shop-module-cartservice-setshippingaddress-page"><p>Country id</p>
+</div></td></tr><tr><td>state</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="shop-module-cartservice-setshippingaddress-page"><p>State</p>
+</div></td></tr></tbody></table></td></tr></tbody></table><h5 id="methods_setshippingaddress_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="shop-module-cartservice-setshippingaddress-page"><p>Returns a promise of the update response</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_updatecartitemquantity">UpdateCartItemQuantity(id, quantity)</h3>
+<div class="updatecartitemquantity"><div class="shop-module-cartservice-updatecartitemquantity-page"><p>Updates the item quantity of a cart item</p>
+</div><h5 id="methods_updatecartitemquantity_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="shop-module-cartservice-updatecartitemquantity-page"><p>Cart item id. <code>cart_key</code> is the key given for each cart item. See <code>cart/</code> to find the <code>cart_key</code></p>
+</div></td></tr><tr><td>quantity</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="shop-module-cartservice-updatecartitemquantity-page"><p>New quantity of the item</p>
+</div></td></tr></tbody></table><h5 id="methods_updatecartitemquantity_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="shop-module-cartservice-updatecartitemquantity-page"><p>Returns a promise of the update response</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

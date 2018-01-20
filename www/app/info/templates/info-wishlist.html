@@ -1,0 +1,18 @@
+<ion-view view-title="{{ 'info.title_info_wishlist' | i18n }}">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh" on-refresh="refreshUI()"></ion-refresher>
+
+        <ion-list class="recent-items-list">
+            <ion-item class="item item-thumbnail-left cart-item" ng-repeat="item in items">
+                <img class="cart-image" ng-src="{{item.images[0] ? item.images[0].shop_thumbnail : ''}}">
+                <h2 ng-bind-html="item.name"></h2>
+                <p ng-bind-html="item.price_html"></p>
+               
+                <ion-option-button class="button-primary" ui-sref="app.menu.shop.item({ id: item.id })" ng-click="goToShop()"><i class="icon ion-ios-cart-outline"></i></ion-option-button>
+                <ion-option-button class="button-assertive" ng-click="removeItem(item.id)"><i class="icon ion-ios-trash-outline"></i></ion-option-button>
+            </ion-item>
+            <ion-item ng-if="items.length < 1" i18n="info.errors_empty_wishlist"></ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>

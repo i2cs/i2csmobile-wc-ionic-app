@@ -1,0 +1,12 @@
+<div class="row"> 
+	<div class="col">
+		<button class="button button-default" ng-class="{'button-small' : small}" style="float: right;" on-tap="ns.decrementStep()"><i class="ion-ios-minus-empty"></i></button>
+	</div>
+	<div class="col">
+		<label class="button button-clear" ng-class="{'button-small' : small}">{{ngModel}}</label>
+		<input type="hidden" ng-change="ngChange()" ng-model="ngModel" ng-min="minimum" ng-max="maximum" style="text-align:center" class="button"/>
+	</div> 
+	<div class="col">
+		<button class="button button-default" ng-class="{'button-small' : small}" on-tap="ns.incrementStep()"><i class="ion-ios-plus-empty"></i></button>
+	</div>     
+</div>

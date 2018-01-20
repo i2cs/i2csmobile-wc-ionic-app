@@ -1,0 +1,64 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-app-version": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "ionic-plugin-deploy": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "onesignal-cordova-plugin": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.i2cs.mobile.wc.demo"
+        }
+    }
+}

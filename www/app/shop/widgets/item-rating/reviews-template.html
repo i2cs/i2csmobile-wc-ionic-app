@@ -1,0 +1,39 @@
+<div class="padding">
+    <ionic-ratings ng-if="item.review_guest" ratingsobj="ratingsSettings" class="rating-big text-center"></ionic-ratings>
+</div>
+
+<div class="list" ng-if="item.review_guest && !review_added">
+    <label class="item item-input" ng-if="!userLoggedIn() || forced_to_enter_author_details">
+        <input type="text" ng-model="review.author" placeholder="{{ 'shop.reviewer_name_label' | i18n }}">
+    </label>
+    <label class="item item-input" ng-if="!userLoggedIn() || forced_to_enter_author_details">
+        <input type="email" ng-model="review.email" placeholder="{{ 'shop.reviewer_email_label' | i18n }}">
+    </label>
+    <label class="item item-input">
+        <textarea ng-model="review.text" placeholder="{{ 'shop.review_label' | i18n }}"></textarea>
+    </label>
+</div>
+
+<div class="padding text-cente" ng-if="review_added">
+    {{success_message}}
+</div>
+
+<div class="padding" ng-if="item.review_guest && !review_added">
+    <button ng-click="postReview()" class="button button-block button-positive" i18n="shop.item_rating_post_review"></button>
+</div>
+
+<div class="list card" ng-repeat="review in reviews">
+    <div class="item item-body">
+        <ionic-ratings class="text-center" ratingsobj="{rating : review.rating, readOnly : true}"></ionic-ratings>
+        <p ng-bind-html="review.review"></p>
+        <p i18n="shop.item_rating_author" data-author="{{review.name}}" data-added="{{review.date_created | date : format : medium}}"></p>
+    </div>
+</div>
+
+<!--<div class="padding" ng-if="reviews.length > 0">
+    <button ng-click="loadNextPage()" class="button button-block button-light" i18n="shop.item_rating_load_more"></button>
+</div>-->
+
+<div class="padding text-cente">
+    <div ng-if="reviews.length == 0" i18n="shop.text_no_reviews"></div>
+</div>

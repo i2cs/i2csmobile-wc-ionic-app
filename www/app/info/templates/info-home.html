@@ -1,0 +1,45 @@
+<ion-view view-title="{{ 'info.title_info_home' | i18n }}">
+    <ion-content elastic-header="info-elastic-header" delegate-handle="example-scroller">
+        <img src="img/info-header.png" id="info-elastic-header" width="100%" />
+        <div class="list">
+            <div style="border-top: 0;" ng-if="data.user && data.user.customer_id" class="item item-icon-left item-button-right">
+                <i class="icon ion-ios-person-outline"></i> {{::data.user.firstname}} {{::data.user.lastname}} 
+                <button class="button button-assertive button-small" ng-click="logout()" i18n="info.buttons_logout"></button>
+            </div>
+            <div style="border-top: 0;" ng-if="!data.user || !data.user.customer_id" class="item item-icon-left" ng-click="openLoginModal()">
+                <i class="icon ion-ios-person-outline"></i> <span i18n="info.buttons_login"></span>
+            </div>
+            <a class="item item-icon-left" href="#/app/menu/info/orders" ng-class="{'item-disabled' : !data.user || !data.user.customer_id}">
+                <i class="icon ion-ios-pricetags-outline"></i> <span i18n="info.buttons_orders"></span>
+            </a>
+            
+            <a class="item item-icon-left" href="#/app/menu/info/wishlist" ng-class="{'item-disabled' : !data.user || !data.user.customer_id}">
+                <i class="icon ion-ios-bookmarks-outline"></i> <span i18n="info.buttons_wishlist"></span>
+            </a>
+
+            <ion-toggle class="item item-icon-left" ng-model="info.notifications" ng-checked="info.notifications" ng-change="toggleNotifications()" toggle-class="toggle-calm"><i class="icon ion-ios-bell-outline"></i> <span i18n="info.buttons_notifications"></span></ion-toggle>
+            
+            <a class="item item-icon-left" ng-click="openContactUsModal()">
+                <i class="icon ion-ios-email-outline"></i> <span i18n="info.buttons_contact"></span>
+            </a>
+            <a class="item item-icon-left" ng-click="openAboutModal()">
+                <i class="icon ion-ios-information-outline"></i> <span i18n="info.buttons_about"></span>
+            </a>
+            <a class="item item-icon-left" ng-click="openChat()" ng-if="chat_enabled">
+                <i class="icon ion-ios-chatboxes-outline"></i> <span i18n="info.buttons_chat"></span>
+            </a>
+            <label class="item item-input item-select">
+                <div class="input-label" i18n="info.buttons_language"></div>
+                <language-switch></language-switch>
+            </label>
+            <!-- remove this item on production -->
+            <label class="item item-input item-select" ng-if="demo_mode">
+                <div class="input-label" i18n="info.buttons_layout"></div>
+                <menu-switch></menu-switch>
+            </label>
+            <a class="item item-icon-left item-divider" ng-if="demo_mode" href="http://i2csmobile.com/market" target="_system">
+                <i class="icon ion-ios-cart-outline"></i> <span>Buy source code from i2csmobile.com</span>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

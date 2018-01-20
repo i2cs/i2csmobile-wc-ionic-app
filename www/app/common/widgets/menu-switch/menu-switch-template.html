@@ -1,0 +1,3 @@
+<select ng-model="d.menu" name="menu">
+    <option value="{{::menu.id}}" ng-selected="menu.id == d.menu" ng-repeat="menu in [{name : 'Tabs', id : 'tabs'}, {name : 'Side', id : 'side'}]">{{::menu.name}}</option>
+</select>

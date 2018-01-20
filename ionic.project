@@ -1,0 +1,8 @@
+{
+  "name": "i2CS Mobile WC",
+  "app_id": "",
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

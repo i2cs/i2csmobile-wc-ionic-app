@@ -1,0 +1,81 @@
+<ion-view view-title="{{ 'cart.title_checkout' | i18n }}" cache-view="false">
+    <ion-nav-buttons side="right">
+        <a class="button button-positive" ng-click="openLoginModal()"><i class="icon ion-ios-person-outline"></i></a>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+            <form name="forms.checkoutForm" novalidate>
+                <div class="item item-divider" i18n="cart.order_your_details"></div>
+                <div class="row no-padding item item-input item-floating-label item-double-col">
+                    <label class="item item-input item-floating-label col-50">
+                        <span class="input-label" i18n="cart.order_firstname"></span>
+                        <input type="text" data-i18n-attr="{placeholder: 'cart.order_firstname'}" ng-model="checkout.firstname" name="firstname" required>
+                    </label>
+                    <label class="item item-input item-floating-label col-50">
+                        <span class="input-label" i18n="cart.order_lastname"></span>
+                        <input type="text" data-i18n-attr="{placeholder: 'cart.order_lastname'}" ng-model="checkout.lastname" name="lastname" required>
+                    </label>
+                </div>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label" i18n="cart.order_email"></span>
+                    <input type="email" data-i18n-attr="{placeholder: 'cart.order_email'}" ng-model="checkout.email" name="email" required>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label" i18n="cart.order_telephone"></span>
+                    <input type="tel" data-i18n-attr="{placeholder: 'cart.order_telephone'}" ng-model="checkout.telephone" name="telephone" required>
+                </label>
+
+                <div class="item item-divider">
+                    <span i18n="cart.order_your_address"></span>
+                    <geolocation-address style="float:right" line1="checkout.address_1"
+                                         line2="checkout.address_2"
+                                         city="checkout.city"
+                                         postalcode="checkout.postcode"
+                                         country="checkout.country_id"
+                                         state="checkout.state"></geolocation-address>
+                </div>
+
+                <label class="item item-input item-floating-label">
+                    <span class="input-label" i18n="cart.order_address1"></span>
+                    <input type="text" data-i18n-attr="{placeholder: 'cart.order_address1'}" ng-model="checkout.address_1" name="address_1" required>
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label" i18n="cart.order_address2"></span>
+                    <input type="text" data-i18n-attr="{placeholder: 'cart.order_address2'}" ng-model="checkout.address_2" name="address_2">
+                </label>
+                <div class="row no-padding item item-input item-floating-label item-double-col">
+                    <label class="item item-input item-floating-label col-50">
+                        <span class="input-label" i18n="cart.order_city"></span>
+                        <input type="text" data-i18n-attr="{placeholder: 'cart.order_city'}" ng-model="checkout.city" name="city" required>
+                    </label>
+                    <label class="item item-input item-floating-label col-50">
+                        <span class="input-label" i18n="cart.order_postal"></span>
+                        <input type="text" data-i18n-attr="{placeholder: 'cart.order_postal'}" ng-model="checkout.postcode" maxlength="10" minlength="5" name="postal_code" required>
+                    </label>
+                </div>
+                <div class="row no-padding item item-double-col">
+                    <label class="item item-input item-select col-50">
+                        <div class="input-label" i18n="cart.order_country"></div>
+                        <select ng-model="checkout.country_id" ng-change="countryChanged()" name="country_id" ng-init="countryChanged()" required>
+                            <option value="{{::country_id}}" ng-selected="country_id == checkout.country_id" ng-repeat="(country_id, country_name) in data.shipping_countries">{{::country_name}}</option>
+                        </select>
+                    </label>
+                    <label class="item item-input col-50" ng-class="{'item-select' : states}" ng-class="{'item-floating-label' : !states}">
+                        <div class="input-label" i18n="cart.order_region"></div>
+                        <input ng-if="!states" type="text" ng-model="checkout.state" name="state" required>
+                        <select ng-if="states" ng-model="checkout.state" name="state" required>
+                            <option value="{{::state.state_id}}" ng-selected="state.state_id == checkout.state" ng-repeat="state in states" ng-bind-html="state.name"></option>
+                        </select>
+                    </label>
+                </div>
+            </form>
+        </ion-list>
+    </ion-content>
+
+    <ion-footer-bar align-title="left" ng-class="{'bar-assertive':forms.checkoutForm.$invalid, 'bar-positive':forms.checkoutForm.$valid}">
+        <h2 class="title">{{total_amount | currency : CURRENCY_SYMBOL}}</h2>
+        <div class="buttons">
+            <a class="button" ng-click="savePersonalInfo()" i18n="cart.button_next"></a>
+        </div>
+    </ion-footer-bar>
+</ion-view>
