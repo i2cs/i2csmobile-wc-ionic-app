@@ -1,1 +1,42 @@
 /* custom css goes here */
+@font-face {
+    font-family: "DroidKufi";
+    src: url("fonts/DroidKufi-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.justify-product-button {
+    margin: -5px;
+}
+
+.tab-title {
+    font-family: "DroidKufi", serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.align-right {
+    float: right;
+    text-align: right;
+}
+
+.bar .title {
+    text-align: center;
+}
+
+.bar .title.title-left {
+    text-align: center;
+    left: 57px !important;
+}
+
+.toggle-small .handle {
+    top: 8px;
+}
+
+.item-input input{
+    padding-right: 2px;
+}
+.card .item.item-input input, .list-inset .item.item-input input, .padding-horizontal > .list .item.item-input input, .padding > .list .item.item-input input {
+    padding-right: 2px;
+}

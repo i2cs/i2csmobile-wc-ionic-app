@@ -18,22 +18,22 @@
         </ion-header-bar>
         <ion-content>
             <ion-list>
-                <a menu-close href="#/app/menu/shop/home" class="item item-icon-left">
+                <a menu-close href="#/app/menu/shop/home" class="item item-icon-left global-font">
                     <i class="icon ion-ios-pricetags-outline"></i> {{ 'menu.shop' | i18n }}
                 </a>
-                <a menu-close href="#/app/menu/offers/home" class="item item-icon-left">
+                <a menu-close href="#/app/menu/offers/home" class="item item-icon-left global-font">
                     <i class="icon ion-ios-star-outline"></i> {{ 'menu.offers' | i18n }}
                 </a>
-                <a menu-close href="#/app/menu/cart/home" class="item item-icon-left">
+                <a menu-close href="#/app/menu/cart/home" class="item item-icon-left global-font">
                     <i class="icon ion-ios-cart-outline"></i> {{ 'menu.cart' | i18n }}
                 </a>
-                <a menu-close icon-on="ion-ios-more-outline" href="#/app/menu/info/home" class="item item-icon-left">
+                <a menu-close icon-on="ion-ios-more-outline" href="#/app/menu/info/home" class="item item-icon-left global-font">
                     <i class="icon ion-ios-more-outline"></i> {{ 'menu.more' | i18n }}
                 </a>
-                <div ng-if="!data.user || !data.user.customer_id" menu-close icon-on="ion-ios-person-outline" ng-click="openLoginModal()" class="item item-icon-left">
+                <div  ng-if="!data.user || !data.user.customer_id" menu-close icon-on="ion-ios-person-outline" ng-click="openLoginModal()" class="item item-icon-left global-font">
                     <i class="icon ion-ios-person-outline"></i>{{ 'menu.login' | i18n }}
                 </div>
-                <div ng-if="data.user && data.user.customer_id" class="item item-icon-left item-button-right">
+                <div ng-if="data.user && data.user.customer_id" class="item item-icon-left item-button-right global-font">
                     <i class="icon ion-ios-person-outline"></i> {{::data.user.firstname}} {{::data.user.lastname}}
                     <button class="button button-assertive button-small" ng-click="logout()" i18n="info.buttons_logout"></button>
                 </div>

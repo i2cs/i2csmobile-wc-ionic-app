@@ -19,7 +19,7 @@ angular.module('starter')
         $localStorage.lang = $localStorage.lang || 'en-US';
 
         $timeout(function () {
-            var lang = $localStorage.lang || 'en-US';
+            var lang = $localStorage.lang || 'ar-EG';
             i18nService.SetLanguage(lang);
         }, 0);
 
@@ -224,7 +224,6 @@ angular.module('starter')
         if (!$rootScope.data.notInitialLoad) {
             $rootScope.welcome = WELCOME_SLIDES || [];
             $rootScope.data.notInitialLoad = true;
-            $rootScope.openWelcomeModal();
         }
 
         // load countries for user registration
