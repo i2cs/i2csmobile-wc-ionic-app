@@ -57,4 +57,4 @@ angular.module('starter')
 
     // if demo mode is set to true, some dynamic configurations 
     // used only for demo app will appear in info section
-    .constant('DEMO_MODE', true)
+    .constant('DEMO_MODE', false)
