@@ -201,7 +201,7 @@ angular
         $scope.savePersonalInfo = function () {
             if ($scope.forms.checkoutForm.$invalid) {
                 $ionicPopup.alert({
-                    title: 'Oops! Please fill all fields',
+                    title: locale.getString('modals.registration_validations_title'),
                     cssClass: 'desc-popup',
                     scope: $scope,
                     templateUrl: 'app/cart/templates/popups/missing-step1.html'
@@ -220,7 +220,7 @@ angular
         $rootScope.loadInvoice = function () {
             if ($scope.forms.checkoutForm && $scope.forms.checkoutForm.$invalid) {
                 $ionicPopup.alert({
-                    title: 'Oops! Please fill following fields',
+                    title: locale.getString('modals.registration_validations_title'),
                     cssClass: 'desc-popup',
                     scope: $scope,
                     templateUrl: 'app/cart/templates/popups/missing-step2.html'
@@ -286,7 +286,7 @@ angular
         $rootScope.confirmOrder = function () {
             if ($scope.forms.checkoutForm && $scope.forms.checkoutForm.$invalid) {
                 $ionicPopup.alert({
-                    title: 'Oops! Please fill following fields',
+                    title: locale.getString('modals.registration_validations_title'),
                     cssClass: 'desc-popup',
                     scope: $scope,
                     templateUrl: 'app/cart/templates/popups/missing-step2.html'
