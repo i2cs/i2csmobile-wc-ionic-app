@@ -43,6 +43,7 @@
     "onesignal-cordova-plugin@2.0.3"
   ],
   "cordovaPlatforms": [
-    "android"
+    "android",
+    "ios"
   ]
 }

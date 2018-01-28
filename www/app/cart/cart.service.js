@@ -60,6 +60,12 @@ angular
                     for (var i in value.taxes) {
                         taxes += value.taxes[i];
                     }
+					if(key == "free_shipping:2"){
+						value.id = "free_shipping:2";
+						value.label = "Free Shipping";
+						value.cost = 0;
+						value.method_id = "free_shipping";
+					}
                     response.methods.push({
                         code: value.id,
                         title: value.label,

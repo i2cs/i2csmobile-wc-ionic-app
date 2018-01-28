@@ -98,7 +98,7 @@ angular
 */
 angular
     .module('cart.module')
-    .controller('CartCheckoutCtrl', function ($scope, $rootScope, $state, $localStorage, $ionicModal, $ionicLoading, $ionicPopup, appService, CartService) {
+    .controller('CartCheckoutCtrl', function ($scope, $rootScope, $state, $localStorage, $ionicModal, $ionicLoading, $ionicPopup, appService, CartService, locale) {
         var vm = this;
         // sync form input to localstorage
         $localStorage.checkout = $localStorage.checkout || {};
@@ -308,6 +308,7 @@ angular
                 order['billing_state'] = $scope.checkout['state'];
                 order['billing_postcode'] = $scope.checkout['postcode'];
                 order['order_comments'] = $rootScope.paymentAndShipping['comment'];
+				order['terms'] = 1;
                 order['_wpnonce'] = $scope._wpnonce;
 
                 if ($state.get("app.menu.payment_modules." + $rootScope.paymentAndShipping.payment_method + ".home")) {

@@ -35,13 +35,17 @@
 }
 
 .item-input input{
-    padding-right: 2px;
+    padding-right: 5px;
 }
 .card .item.item-input input, .list-inset .item.item-input input, .padding-horizontal > .list .item.item-input input, .padding > .list .item.item-input input {
-    padding-right: 2px;
+    padding-right: 5px;
 }
 
 .full-image {
     width: 100%;
     height:70%;
+}
+
+.item-complex.item-icon-right .item-content {
+    padding-right: 12px;
 }

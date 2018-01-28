@@ -16,7 +16,7 @@
 */
 angular.module('starter')
     .controller('WelcomeCtrl', function ($scope, $timeout, $state, $ionicModal, $ionicPlatform, $localStorage, locale, i18nService, dataService, appService) {
-        $localStorage.lang = $localStorage.lang || 'en-US';
+        $localStorage.lang = $localStorage.lang || 'ar-EG';
 
         $timeout(function () {
             var lang = $localStorage.lang || 'ar-EG';
