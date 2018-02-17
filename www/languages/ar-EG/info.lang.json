@@ -21,9 +21,9 @@
   "buttons_language": "اللغة",
   "buttons_currency": "عملة",
   "buttons_more": "أكثر",
-  "buttons_wishlist": "مفضلة",
-  "errors_no_orders": "هل لديك ليس لديها أي أمر حتى الآن!",
-  "errors_empty_wishlist": "سلة الشراء فارغة !",
+  "buttons_wishlist": "قائمة امنياتي",
+  "errors_no_orders": "ليس لديك أي طلبات حتى الآن!",
+  "errors_empty_wishlist": "قائمة امنياتي فارغة !",
   
   "contact_success": "إرسال رسالتك بنجاح",
   "contact_name": "اسمك",

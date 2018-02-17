@@ -1,7 +1,7 @@
 ﻿{
   "not_signup_modal_title": "هل ترغب في تسجيل في؟",
   "not_signup_modal_main": "تسجيل الدخول أو اشترك للحصول على تخفيضات هائلة!",
-  "not_signup_modal_desc": "بعض المنتجات لديها خصومات خاصة متاحة فقط لمستخدمي تطبيقات الجوال. لن يستغرق أكثر من 2 دقائق!",
+  "not_signup_modal_desc": "بعض المنتجات لديها خصومات خاصة متاحة فقط لمستخدمي تطبيق صيدلي. ذلك لن يستغرق أكثر من دقيقة!",
   "contact_modal_title": "اتصل بنا",
   "contact_modal_main": "مرحبا! بحاجة الى مساعدة؟ اتصل بنا!",
   "contact_modal_desc": "كما هو الحال دائما، لكنا نحب لمساعدتك! اختيار وسيلة للاتصال",
@@ -14,7 +14,7 @@
   "registered_title": "مرحبا بكم في صيدلي!",
   "registered_main": "مرحبا {firstname}، وأنت الآن مسجل!",
   "registered_desc": "الآن يمكنك المطالبة العروض جوال فقط! الذهاب إلى قائمة منتجاتنا والحصول على خصومات الخاص بك الآن!",
-  "login_modal_not_a_customer": "لا أحد العملاء؟",
+  "login_modal_not_a_customer": "ليس لديك حساب؟",
   "update_available_title": "التحديث متاح",
   "update_available_main": "تحديث تطبيق متاح",
   "update_downloading": "تحميل ...",

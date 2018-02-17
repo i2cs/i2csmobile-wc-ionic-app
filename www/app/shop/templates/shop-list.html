@@ -2,7 +2,7 @@
     <ion-nav-buttons side="right">
         <a class="button button-positive" href="#/app/menu/shop/search"><i class="icon ion-ios-search"></i></a>
     </ion-nav-buttons>
-    <ion-content auto-hide="tabs" elastic-header="example-elastic-header" delegate-handle="example-scroller">
+    <ion-content delegate-handle="example-scroller">
         <ion-refresher pulling-text="Pull to refresh" on-refresh="refreshUI()"></ion-refresher>
         <ion-slide-box id="example-elastic-header" show-pager="false" class="home-slider" does-continue="true" auto-play="true">
             <ion-slide ng-repeat="slide in data.slides">
@@ -12,7 +12,7 @@
             </ion-slide>
         </ion-slide-box>
         
-        <category-list thumbnail="true" mode="vertical" category="0"></category-list>
+        <category-list thumbnail="true" mode="icons" category="0"></category-list>
 
         <ion-slide-box show-pager="false" class="home-slider" does-continue="true" auto-play="true">
             <ion-slide ng-repeat="slide in data.offers">
