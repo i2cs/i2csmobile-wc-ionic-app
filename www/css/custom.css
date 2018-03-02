@@ -53,10 +53,38 @@
 }
 
 .col-80 {
-    flex: 0 0 90%;
+    flex: 0 0 100%;
     max-width: 100%;
 }
 
 .button.button-full {
-    margin-right: -5px;
+    margin-right: -15px;
+    margin-left: 10px;
+}
+
+.bar.bar-assertive.bar-footer {
+    background-image: linear-gradient(180deg,#549835,#549835 50%,transparent 50%);
+}
+
+.bar.bar-assertive {
+    border-color: #549835;
+    background-color: #549835;
+    background-image: linear-gradient(0deg,#549835,#549835 50%,transparent 50%);
+    color: #fff;
+}
+
+.bar-assertive .button {
+    border-color: transparent;
+    background-color: #549835;
+    color: #fff;
+}
+
+.bar-assertive .button.activated {
+    border-color: transparent;
+    background-color: #549835;
+    color: #fff;
+}
+
+.swap-sides{
+    !important;
 }
