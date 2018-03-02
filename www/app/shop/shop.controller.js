@@ -21,7 +21,7 @@ angular
         $scope.loadingLatest = false;
 
         // sync form input to localstorage
-        $localStorage.home = $localStorage.home || {};
+        $localStorage.home = {};
         $scope.data = $localStorage.home;
         $scope.data.latestPage = 1;
 

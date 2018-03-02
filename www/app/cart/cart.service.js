@@ -60,12 +60,19 @@ angular
                     for (var i in value.taxes) {
                         taxes += value.taxes[i];
                     }
-					if(key == "free_shipping:2"){
+					if(key.indexOf("free_shipping:") !== -1){
 						value.id = "free_shipping:2";
 						value.label = "Free Shipping";
 						value.cost = 0;
 						value.method_id = "free_shipping";
 					}
+                    if(key.indexOf("flat_rate:") !== -1){
+                        value.id = key;
+                        value.label = "تكلفة التوصيل";
+                        value.cost = 0;
+                        value.method_id = "flat_rate";
+                    }
+
                     response.methods.push({
                         code: value.id,
                         title: value.label,

@@ -1,10 +1,4 @@
 /* custom css goes here */
-@font-face {
-    font-family: "DroidKufi";
-    src: url("fonts/DroidKufi-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
 
 .justify-product-button {
     margin: -5px;
@@ -56,4 +50,13 @@
 
 .seemore{
     height: 40px;
+}
+
+.col-80 {
+    flex: 0 0 90%;
+    max-width: 100%;
+}
+
+.button.button-full {
+    margin-right: -5px;
 }
