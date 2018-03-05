@@ -2,13 +2,13 @@
 
 
 /**
-* @ngdoc service
-* @name cart.module.CartService
-* @requires ng.$q
-* @requires dateService
-* @description 
-* This service class contains methods needed from add an item to the cart upto checkout with online purchase.
-*/
+ * @ngdoc service
+ * @name cart.module.CartService
+ * @requires ng.$q
+ * @requires dateService
+ * @description
+ * This service class contains methods needed from add an item to the cart upto checkout with online purchase.
+ */
 angular
     .module('cart.module')
     .service('CartService', function ($q, $localStorage, dataService) {
@@ -18,13 +18,13 @@ angular
          * @name shop.module.CartService#GetShippingMethods
          * @methodOf cart.module.CartService
          * @kind function
-         * 
+         *
          * @description
          * Returns available shipping methods for the current cart and customer
-         * 
+         *
          * @example
          <pre>
-            CartService.GetShippingMethods().then(function (data) {
+         CartService.GetShippingMethods().then(function (data) {
                 $scope.shippingMethods = data;
             });
          </pre>
@@ -40,7 +40,7 @@ angular
              "main_title":"Flat Rate"
          }]
          </pre>
-         * 
+         *
          * @returns {promise} Returns a promise of the array of shipping method objects
          */
         this.GetShippingMethods = function () {
@@ -59,6 +59,12 @@ angular
                     var taxes = 0.0;
                     for (var i in value.taxes) {
                         taxes += value.taxes[i];
+                    }
+                    if(key == "free_shipping:2"){
+                        value.id = "free_shipping:2";
+                        value.label = "Free Shipping";
+                        value.cost = 0;
+                        value.method_id = "free_shipping";
                     }
                     response.methods.push({
                         code: value.id,
@@ -80,13 +86,13 @@ angular
          * @name shop.module.CartService#GetPaymentMethods
          * @methodOf cart.module.CartService
          * @kind function
-         * 
+         *
          * @description
          * Returns available payment methods depending on the shipping selection
-         * 
+         *
          * @example
          <pre>
-            CartService.GetPaymentMethods().then(function (data) {
+         CartService.GetPaymentMethods().then(function (data) {
                 $scope.paymentMethods = data;
             });
          </pre>
@@ -103,7 +109,7 @@ angular
              }
          }
          </pre>
-         * 
+         *
          * @returns {promise} Returns a promise of the array of payment method objects
          */
         this.GetPaymentMethods = function () {
@@ -135,7 +141,7 @@ angular
          * @name shop.module.CartService#LoadZones
          * @methodOf cart.module.CartService
          * @kind function
-         * 
+         *
          * @description
          * Returns an array of zone objects relevent to a country
          * @param {String} country_id Selected country code
@@ -156,7 +162,7 @@ angular
          * @name shop.module.CartService#AddOrder
          * @methodOf cart.module.CartService
          * @kind function
-         * 
+         *
          * @description
          * Adds a new order to with the current items in the cart session.
          * @param {object} order The order object
@@ -177,7 +183,7 @@ angular
          * @param {string} order.billing_state  State
          * @param {string} order.billing_postcode  Postcode
          * @param {string} order.order_comments  Comments
-         * 
+         *
          * @returns {promise} Promise of the API call
          */
         this.AddOrder = function (order) {
@@ -196,16 +202,16 @@ angular
          * @name shop.module.CartService#SetShippingAddress
          * @methodOf cart.module.CartService
          * @kind function
-         * 
+         *
          * @description
          * Saves user shipping address
-         * 
+         *
          * @param {object} address Personal info object with shipping address info
          * @param {string} address.city Address City. must be between 2 and 128 characters
          * @param {string} address.postcode Postal code
          * @param {number} address.country_id Country id
          * @param {number} address.state State
-         * 
+         *
          * @returns {promise} Returns a promise of the update response
          */
         this.SetShippingAddress = function (address) {
@@ -224,12 +230,12 @@ angular
          * @name shop.module.CartService#SaveShippingMethod
          * @methodOf cart.module.CartService
          * @kind function
-         * 
+         *
          * @description
          * Sets shipping method for the shopping cart
          * @param {object} info User selected shipping method
          * @param {string} info.shipping_method Shipping method code, ex : `flat_rate:1`
-         * 
+         *
          * @returns {promise} Returns a promise of the update response
          */
         this.SaveShippingMethod = function (info) {
@@ -252,12 +258,12 @@ angular
          * @name shop.module.CartService#SavePaymentMethod
          * @methodOf cart.module.CartService
          * @kind function
-         * 
+         *
          * @description
          * Sets payment method for the shopping cart
          * @param {object} info User selected payment method
          * @param {string} info.payment_method Payment method code, ex : `bacs`
-         * 
+         *
          * @returns {promise} Returns a promise of the update response
          */
         this.SavePaymentMethod = function (info) {
@@ -280,12 +286,12 @@ angular
          * @name shop.module.CartService#RemoveCartItem
          * @methodOf cart.module.CartService
          * @kind function
-         * 
+         *
          * @description
          * Removes an item from the cart
-         * 
+         *
          * @param {number} id Cart item id. `cart_key` is the key given for each cart item. See `cart/` to find the `cart_key`
-         * 
+         *
          * @returns {promise} Returns a promise of the update response
          */
         this.RemoveCartItem = function (id) {
@@ -303,13 +309,13 @@ angular
          * @name shop.module.CartService#UpdateCartItemQuantity
          * @methodOf cart.module.CartService
          * @kind function
-         * 
+         *
          * @description
          * Updates the item quantity of a cart item
-         * 
+         *
          * @param {number} id Cart item id. `cart_key` is the key given for each cart item. See `cart/` to find the `cart_key`
          * @param {number} quantity New quantity of the item
-         * 
+         *
          * @returns {promise} Returns a promise of the update response
          */
         this.UpdateCartItemQuantity = function (id, quantity) {
@@ -327,10 +333,10 @@ angular
          * @name shop.module.CartService#GetCart
          * @methodOf cart.module.CartService
          * @kind function
-         * 
+         *
          * @description
          * Returns the cart object
-         * 
+         *
          * @example
          <pre>
          CartService.GetCart().then(function (data) {
@@ -385,7 +391,7 @@ angular
           "total_amount_clean" : 1204
          }
          </pre>
-         * 
+         *
          * @returns {promise} Returns a promise of the cart object
          */
         this.GetCart = function () {
@@ -440,7 +446,7 @@ angular
                 if (data.shipping_total > 0)
                     cart_object.totals.push({ title: "Shipping", text: data.shipping_total });
                 cart_object.totals.push({ title: "Total", text: data.cart_total });
-                
+
                 cart_object._wpnonce = data._wpnonce;
 
                 return cart_object;
@@ -454,15 +460,15 @@ angular
          * @name shop.module.CartService#AddToCart
          * @methodOf cart.module.CartService
          * @kind function
-         * 
+         *
          * @description
          * Adds an item to the cart.
          * @param {number} product_id Product id
          * @param {number} quantity Quantity
          * @param {object} depricated Depricated field
          * @param {object} variation_object Variation object
-         * 
-         * @returns {promise} Returns a promise of the cart object 
+         *
+         * @returns {promise} Returns a promise of the cart object
          */
         this.AddToCart = function (product_id, quantity, depricated, variation_object) {
 
@@ -476,18 +482,18 @@ angular
         }
 
         /**
-        * @ngdoc function
-        * @name shop.module.CartService#ApplyCoupon
-        * @methodOf cart.module.CartService
-        * @kind function
-        * 
-        * @description
-        * Apply coupon to the shopping cart
-        * 
-        * @param {string} coupon Coupon number or string
-        * 
-        * @returns {promise} Returns a promise of the update response
-        */
+         * @ngdoc function
+         * @name shop.module.CartService#ApplyCoupon
+         * @methodOf cart.module.CartService
+         * @kind function
+         *
+         * @description
+         * Apply coupon to the shopping cart
+         *
+         * @param {string} coupon Coupon number or string
+         *
+         * @returns {promise} Returns a promise of the update response
+         */
         this.ApplyCoupon = function (coupon) {
             return dataService.apiSecuredPost('/cart/coupon', { coupon_code: coupon }).then(function (data) {
                 if (data.error) {

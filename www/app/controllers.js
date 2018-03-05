@@ -1,22 +1,22 @@
 /**
-* @ngdoc controller
-* @name starter.controller:WelcomeCtrl
-* @requires $scope
-* @requires $timeout
-* @requires $state
-* @requires $ionicModal
-* @requires $ionicPlatform
-* @requires $localStorage
-* @requires locale
-* @requires dataService
-* @requires appService
-* @description
-* Entrypoint of the app. Welcome screen renders the loading status of the app. i.e, connecting to API, logged in etc.
-* This controller sets the default language and creates a valid session with the API server. 
-*/
+ * @ngdoc controller
+ * @name starter.controller:WelcomeCtrl
+ * @requires $scope
+ * @requires $timeout
+ * @requires $state
+ * @requires $ionicModal
+ * @requires $ionicPlatform
+ * @requires $localStorage
+ * @requires locale
+ * @requires dataService
+ * @requires appService
+ * @description
+ * Entrypoint of the app. Welcome screen renders the loading status of the app. i.e, connecting to API, logged in etc.
+ * This controller sets the default language and creates a valid session with the API server.
+ */
 angular.module('starter')
     .controller('WelcomeCtrl', function ($scope, $timeout, $state, $ionicModal, $ionicPlatform, $localStorage, locale, i18nService, dataService, appService) {
-        $localStorage.lang = $localStorage.lang || 'en-US';
+        $localStorage.lang = $localStorage.lang || 'ar-EG';
 
         $timeout(function () {
             var lang = $localStorage.lang || 'ar-EG';
@@ -75,33 +75,33 @@ angular.module('starter')
 
 
 /**
-* @ngdoc controller
-* @name starter.controller:AppCtrl
-* @requires $scope
-* @requires $rootScope
-* @requires locale
-* @requires $location
-* @requires $ionicModal
-* @requires $ionicLoading
-* @requires $ionicPopup
-* @requires $ionicHistory
-* @requires $localStorage
-* @requires $state
-* @requires $timeout
-* @requires appService
-* @requires CartService
-* @requires FORGOT_LINK
-* @requires EMAIL
-* @requires PHONE
-* @requires CURRENCY_SYMBOL
-* @requires WELCOME_SLIDES
-* @requires MENU_LAYOUT
-* @requiresDATE_FORMAT
-* 
-* @description
-* This controller is the parent of all the controller states. Contains generic functions and procedures of the
-* app. `$scope.user` variable holds the customer object of currently logged in mobile user.
-*/
+ * @ngdoc controller
+ * @name starter.controller:AppCtrl
+ * @requires $scope
+ * @requires $rootScope
+ * @requires locale
+ * @requires $location
+ * @requires $ionicModal
+ * @requires $ionicLoading
+ * @requires $ionicPopup
+ * @requires $ionicHistory
+ * @requires $localStorage
+ * @requires $state
+ * @requires $timeout
+ * @requires appService
+ * @requires CartService
+ * @requires FORGOT_LINK
+ * @requires EMAIL
+ * @requires PHONE
+ * @requires CURRENCY_SYMBOL
+ * @requires WELCOME_SLIDES
+ * @requires MENU_LAYOUT
+ * @requiresDATE_FORMAT
+ *
+ * @description
+ * This controller is the parent of all the controller states. Contains generic functions and procedures of the
+ * app. `$scope.user` variable holds the customer object of currently logged in mobile user.
+ */
 angular.module('starter')
     .controller('AppCtrl', function ($scope, $rootScope, locale, $location, $ionicModal, $ionicLoading, $ionicPopup, $ionicHistory, $localStorage, $state, $timeout, appService, CartService, FORGOT_LINK, EMAIL, PHONE, CURRENCY_SYMBOL, WELCOME_SLIDES, MENU_LAYOUT, DATE_FORMAT) {
         $scope.user = {};
@@ -197,7 +197,7 @@ angular.module('starter')
             });
         }
 
-        
+
         $rootScope.welcomeModalActive = false;
 
         $rootScope.openWelcomeModal = function () {
@@ -437,24 +437,24 @@ angular.module('starter')
     });
 
 /**
-* @ngdoc controller
-* @name starter.controller:MenuCtrl
-* 
-* @description
-* This controller is the parent of all the controller states with main menu.
-*/
+ * @ngdoc controller
+ * @name starter.controller:MenuCtrl
+ *
+ * @description
+ * This controller is the parent of all the controller states with main menu.
+ */
 angular.module('starter')
     .controller('MenuCtrl', function () {
 
     });
 
 /**
-* @ngdoc controller
-* @name starter.controller:MainCtrl
-* 
-* @description
-* This controller is the parent of all the controller states without main menu.
-*/
+ * @ngdoc controller
+ * @name starter.controller:MainCtrl
+ *
+ * @description
+ * This controller is the parent of all the controller states without main menu.
+ */
 angular.module('starter')
     .controller('MainCtrl', function () {
     });

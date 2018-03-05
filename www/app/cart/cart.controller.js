@@ -1,16 +1,16 @@
 'use strict';
 
 /**
-* @ngdoc controller
-* @name cart.module.controller:CartHomeCtrl
-* @requires $scope
-* @requires $rootScope
-* @requires $ionicLoading
-* @requires CartService
-* @description
-* Show the home page of cart module. Contains the items of current shopping cart. Lists down
-* all items added to the cart. Can proceed to the next step of the checkout process.
-*/
+ * @ngdoc controller
+ * @name cart.module.controller:CartHomeCtrl
+ * @requires $scope
+ * @requires $rootScope
+ * @requires $ionicLoading
+ * @requires CartService
+ * @description
+ * Show the home page of cart module. Contains the items of current shopping cart. Lists down
+ * all items added to the cart. Can proceed to the next step of the checkout process.
+ */
 angular
     .module('cart.module')
     .controller('CartHomeCtrl', function ($scope, $rootScope, $ionicLoading, CartService, COUPONS_ENABLED) {
@@ -79,26 +79,26 @@ angular
     });
 
 /**
-* @ngdoc controller
-* @name cart.module.controller:CartCheckoutCtrl
-* @requires $scope
-* @requires $rootScope
-* @requires $state
-* @requires $localStorage
-* @requires $ionicModal
-* @requires $ionicLoading
-* @requires $ionicPopup
-* @requires appService
-* @requires CartService
-* 
-* @description
-* Contains checkout process. Customer can place an order by providing personal information, selecting 
-* a shipping method and a payment method. If selected payment method is registered as a module in the app,
-* it initiates the online payment flow as the last step of the checkout procedure.
-*/
+ * @ngdoc controller
+ * @name cart.module.controller:CartCheckoutCtrl
+ * @requires $scope
+ * @requires $rootScope
+ * @requires $state
+ * @requires $localStorage
+ * @requires $ionicModal
+ * @requires $ionicLoading
+ * @requires $ionicPopup
+ * @requires appService
+ * @requires CartService
+ *
+ * @description
+ * Contains checkout process. Customer can place an order by providing personal information, selecting
+ * a shipping method and a payment method. If selected payment method is registered as a module in the app,
+ * it initiates the online payment flow as the last step of the checkout procedure.
+ */
 angular
     .module('cart.module')
-    .controller('CartCheckoutCtrl', function ($scope, $rootScope, $state, $localStorage, $ionicModal, $ionicLoading, $ionicPopup, appService, CartService) {
+    .controller('CartCheckoutCtrl', function ($scope, $rootScope, $state, $localStorage, $ionicModal, $ionicLoading, $ionicPopup, appService, CartService, locale) {
         var vm = this;
         // sync form input to localstorage
         $localStorage.checkout = $localStorage.checkout || {};
@@ -130,7 +130,7 @@ angular
 
         $scope.loadCart = function () {
             $ionicLoading.show();
-           
+
             CartService.GetCart().then(function (data) {
                 if (data && data.products && data.products.length < 1) {
                     $state.go('app.menu.cart.home', {}, { reload: true });
@@ -267,19 +267,19 @@ angular
         // method to be called when country is changed by user
         $scope.countryChanged = function () {
             $ionicLoading.show();
-			$scope.states = false;
-			$scope.checkout.state = "";
-			CartService.LoadZones($scope.checkout.country_id).then(function(data){
-				if(Object.keys(data).length !== 0){
-					$scope.states = [];
-					
-					angular.forEach(data, function(v, k){
-						$scope.states.push({state_id: k, name: v});
-					});
-				}
-								
-				$ionicLoading.hide();
-			});
+            $scope.states = false;
+            $scope.checkout.state = "";
+            CartService.LoadZones($scope.checkout.country_id).then(function(data){
+                if(Object.keys(data).length !== 0){
+                    $scope.states = [];
+
+                    angular.forEach(data, function(v, k){
+                        $scope.states.push({state_id: k, name: v});
+                    });
+                }
+
+                $ionicLoading.hide();
+            });
         }
 
         // place the order and if any payment module is registered, navigate to them
@@ -292,7 +292,7 @@ angular
                     templateUrl: 'app/cart/templates/popups/missing-step2.html'
                 });
             } else {
-                
+
                 var order = {};
                 order['payment_method'] = $rootScope.paymentAndShipping.payment_method;
                 order['shipping_method'] = $rootScope.paymentAndShipping.shipping_method;
@@ -308,6 +308,7 @@ angular
                 order['billing_state'] = $scope.checkout['state'];
                 order['billing_postcode'] = $scope.checkout['postcode'];
                 order['order_comments'] = $rootScope.paymentAndShipping['comment'];
+                order['terms'] = 1;
                 order['_wpnonce'] = $scope._wpnonce;
 
                 if ($state.get("app.menu.payment_modules." + $rootScope.paymentAndShipping.payment_method + ".home")) {
@@ -355,13 +356,13 @@ angular
     });
 
 /**
-* @ngdoc controller
-* @name cart.module.controller:CartCheckoutSuccessCtrl
-* @requires $scope
-* @requires $stateParams
-* @description
-* Show success message after an order is added. Shows payment instructions.
-*/
+ * @ngdoc controller
+ * @name cart.module.controller:CartCheckoutSuccessCtrl
+ * @requires $scope
+ * @requires $stateParams
+ * @description
+ * Show success message after an order is added. Shows payment instructions.
+ */
 angular
     .module('cart.module')
     .controller('CartCheckoutSuccessCtrl', function ($scope, $stateParams) {
