@@ -21,7 +21,7 @@
     </ion-content>
 
     <ion-footer-bar align-title="left" ng-class="{'bar-assertive':forms.checkoutForm.$invalid, 'bar-positive':forms.checkoutForm.$valid}">
-        <h2 class="title">KD{{total_amount | number: 2}}</h2>
+        <h2 class="title">{{total_amount | number: 2}}KD</h2>
         <div class="buttons">
             <a class="button" ng-click="loadInvoice()" i18n="cart.button_next"></a>
         </div>

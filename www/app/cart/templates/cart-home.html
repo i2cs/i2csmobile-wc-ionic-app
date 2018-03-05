@@ -39,7 +39,7 @@
                         <number-spinner small="true" ng-model="cart[item.cart_id].q" minimum="{{::item.minimum}}" ng-change="quantityChanged(item.cart_id, cart[item.cart_id].q)"></number-spinner>
                     </div>
                     <div class="col col-50 price-calc swap-sides" style="font-size: 13px;margin-top: 2px;">
-                        x <span class="swap-sides" >KD{{item.price | number: 2}}‎</span> <span class="cart-item-total">KD{{item.total | number: 2}}</span>
+                        x <span class="swap-sides" >{{item.price | number: 2}}KD‎</span> <span class="cart-item-total">{{item.total | number: 2}}KD</span>
                     </div>
                 </div>
 
@@ -47,7 +47,7 @@
             </ion-item>
 
             <ion-item class="cart-totals-item" ng-repeat="total in totals">
-                <p>{{::total.title}}<span class="cart-item-total">KD{{total.text | number: 2}}‎</span></p>
+                <p>{{::total.title}}<span class="cart-item-total">{{total.text | number: 2}}KD‎</span></p>
             </ion-item>
         </ion-list>
     </ion-content>
@@ -63,7 +63,7 @@
     </ion-footer-bar>
 
     <ion-footer-bar align-title="left" class="bar-positive" ng-if="items.length > 0">
-        <h2 class="title">KD{{total_amount | number: 2}}</h2>
+        <h2 class="title">{{total_amount | number: 2}}KD</h2>
         <div class="buttons">
             <a class="button" href="#/app/menu/cart/checkout" i18n="cart.button_next"></a>
         </div>

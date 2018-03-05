@@ -29,7 +29,7 @@
     "error_postal_code_minlength": "الرمز البريدي هو رقم 5 أرقام",
     "error_postal_code_maxlength": "الرمز البريدي هو رقم 5 أرقام",
     "error_country_id_required": "الرجاء إدخال بلدك",
-    "error_zone_id_required": "الرجاء إدخال المنطقة أو الدولة",
+    "error_zone_id_required": "الرجاء إدخال المنطقة أو المحافظة",
     "error_shipping_method_required": "الرجاء اختيار طريقة الشراء",
     "error_payment_method_required": "الرجاء إدخال طريقة الدفع",
     "button_remove": "إزالة",
@@ -48,6 +48,6 @@
     "order_city": "المدينة",
     "order_postal": "الرمز البريدي",
     "order_country": "البلد",
-  "order_region": "المنطقة / الدولة",
+  "order_region": "المنطقة او المحافظة",
   "locate_address": "تحديد عنوان"
 }
