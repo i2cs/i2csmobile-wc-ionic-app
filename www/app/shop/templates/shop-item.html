@@ -44,24 +44,18 @@
                                 <span ng-if="!showLessDesc" i18n="shop.item_view_less"></span>
                             </button>
 
-                            <div class="item item-divider" ng-if="item.attribure_groups && item.attribure_groups.length > 0" i18n="shop.item_specification"></div>
                             <div ng-if="item.attribure_groups && item.attribure_groups.length > 0" ng-class="{'seemore' : showLessSpec}" class="padding" ng-init="showLessSpec = true">
                                 <div>
                                     <p>
-                                        <table class="attribute-table" ng-repeat="attribure_group in item.attribure_groups">
-                                            <thead> <tr> <td colspan="2"><strong>{{attribure_group.name}}</strong></td> </tr> </thead>
-                                            <tbody>
-                                                <tr ng-repeat="attribute in attribure_group.attribute"> <td>{{attribute.name}}</td> <td>{{attribute.text}}</td> </tr>
-                                            </tbody>
-                                        </table>
+                                    <table class="attribute-table" ng-repeat="attribure_group in item.attribure_groups">
+                                        <thead> <tr> <td colspan="2"><strong>{{attribure_group.name}}</strong></td> </tr> </thead>
+                                        <tbody>
+                                        <tr ng-repeat="attribute in attribure_group.attribute"> <td>{{attribute.name}}</td> <td>{{attribute.text}}</td> </tr>
+                                        </tbody>
+                                    </table>
                                     </p>
                                 </div>
                             </div>
-
-                            <button ng-if="item.attribure_groups && item.attribure_groups.length > 0" class="button button-positive button-small button-outline button-full button-no-border" ng-click="showLessSpec = !showLessSpec">
-                                <span ng-if="showLessSpec" i18n="shop.item_view_all"></span>
-                                <span ng-if="!showLessSpec" i18n="shop.item_view_less"></span>
-                            </button>
 
                             <div class="item item-divider" i18n="shop.item_available_options"></div>
 
