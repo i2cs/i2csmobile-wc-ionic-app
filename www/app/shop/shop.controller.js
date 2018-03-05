@@ -1,18 +1,18 @@
 'use strict';
 
 /**
-* @ngdoc controller
-* @name shop.module.controller:ShopHomeCtrl
-* @requires $scope
-* @requires $localStorage
-* @requires $rootScope
-* @requires $stateParams
-* @requires $ionicSlideBoxDelegate
-* @requires ShopService
-* @description
-* Home page of the Shop module. This controller contains methods to show banners and product catalog in
-* the home page.
-*/
+ * @ngdoc controller
+ * @name shop.module.controller:ShopHomeCtrl
+ * @requires $scope
+ * @requires $localStorage
+ * @requires $rootScope
+ * @requires $stateParams
+ * @requires $ionicSlideBoxDelegate
+ * @requires ShopService
+ * @description
+ * Home page of the Shop module. This controller contains methods to show banners and product catalog in
+ * the home page.
+ */
 angular
     .module('shop.module')
     .controller('ShopHomeCtrl', function ($scope, $localStorage, $rootScope, $stateParams, $ionicSlideBoxDelegate, ShopService, MAIN_PRMO_BANNER_ID, MAIN_OFFERS_BANNER_ID) {
@@ -21,7 +21,7 @@ angular
         $scope.loadingLatest = false;
 
         // sync form input to localstorage
-        $localStorage.home = $localStorage.home || {};
+        $localStorage.home = {};
         $scope.data = $localStorage.home;
         $scope.data.latestPage = 1;
 
@@ -47,7 +47,7 @@ angular
                 $ionicSlideBoxDelegate.update();
             });
         }
-        
+
         $scope.loadFeatured = function () {
             ShopService.GetFeaturedProducts().then(function (data) {
                 $scope.data.featuredItems = data;
@@ -79,12 +79,12 @@ angular
                     $scope.endOfRLatestItems = true;
                 $scope.loadingLatest = false;
                 $scope.$broadcast('scroll.infiniteScrollComplete');
-				$scope.$broadcast('scroll.refreshComplete');
+                $scope.$broadcast('scroll.refreshComplete');
             }, function (data) {
                 $scope.loadingLatest = false;
                 $scope.endOfRLatestItems = true;
                 $scope.$broadcast('scroll.infiniteScrollComplete');
-				$scope.$broadcast('scroll.refreshComplete');
+                $scope.$broadcast('scroll.refreshComplete');
             });
         }
 
@@ -93,7 +93,7 @@ angular
                 $scope.loadLatest();
             } else {
                 $scope.$broadcast('scroll.infiniteScrollComplete');
-				$scope.$broadcast('scroll.refreshComplete');
+                $scope.$broadcast('scroll.refreshComplete');
             }
         }
 
@@ -103,28 +103,28 @@ angular
 
 
 /**
-* @ngdoc controller
-* @name shop.module.controller:ShopItemCtrl
-* @requires $scope
-* @requires $timeout
-* @requires $localStorage
-* @requires $rootScope
-* @requires $state
-* @requires $stateParams
-* @requires $ionicPopup
-* @requires $ionicLoading
-* @requires $ionicTabsDelegate
-* @requires $ionicSlideBoxDelegate
-* @requires locale
-* @requires Slug
-* @requires ShopService
-* @requires CartService
-* @requires WEBSITE
-* @requires CURRENCY_SYMBOL
-* @description
-* Shows details of a selected item. Renders all attributes and options in the view.
-* Contains a `Buy` button which interacts with the API and add to product cart.
-*/
+ * @ngdoc controller
+ * @name shop.module.controller:ShopItemCtrl
+ * @requires $scope
+ * @requires $timeout
+ * @requires $localStorage
+ * @requires $rootScope
+ * @requires $state
+ * @requires $stateParams
+ * @requires $ionicPopup
+ * @requires $ionicLoading
+ * @requires $ionicTabsDelegate
+ * @requires $ionicSlideBoxDelegate
+ * @requires locale
+ * @requires Slug
+ * @requires ShopService
+ * @requires CartService
+ * @requires WEBSITE
+ * @requires CURRENCY_SYMBOL
+ * @description
+ * Shows details of a selected item. Renders all attributes and options in the view.
+ * Contains a `Buy` button which interacts with the API and add to product cart.
+ */
 angular
     .module('shop.module')
     .controller('ShopItemCtrl', function ($scope, $timeout, $localStorage, $rootScope, $state, $filter, $stateParams, $ionicPopup, $ionicLoading, $ionicTabsDelegate, $ionicSlideBoxDelegate, locale, Slug, ShopService, CartService, WEBSITE, CURRENCY_SYMBOL) {
@@ -178,7 +178,7 @@ angular
             $scope.item.mobile_special = data.mobile_special;
             $scope.item.stock = data.stock;
             $scope.item.model = data.model;
-            
+
             $scope.item.options = data.type == "variable" ? data.attributes : [];
 
             // set specs values
@@ -199,10 +199,10 @@ angular
             $scope.item.rating = data.average_rating;
             $scope.item.entry_name = "Review";
             $scope.item.entry_review = "Review";
-            
+
             //$scope.item.related = data.products;
             $scope.item.variations = data.variations;
-            
+
             $scope.item.images = data.images;
 
             if (!$scope.item_cache.items)
@@ -274,10 +274,10 @@ angular
                     templateUrl: "app/shop/templates/popups/missing-props.html",
                     scope: $scope,
                     buttons: [
-                      {
-                          text: 'OK',
-                          type: 'button-positive'
-                      }
+                        {
+                            text: 'OK',
+                            type: 'button-positive'
+                        }
                     ]
                 });
             } else {
@@ -319,10 +319,10 @@ angular
                     templateUrl: "app/shop/templates/popups/missing-props.html",
                     scope: $scope,
                     buttons: [
-                      {
-                          text: 'OK',
-                          type: 'button-positive'
-                      }
+                        {
+                            text: 'OK',
+                            type: 'button-positive'
+                        }
                     ]
                 });
             } else {
@@ -333,15 +333,15 @@ angular
                     cssClass: 'desc-popup',
                     template: locale.getString('shop.added_to_cart_desc'),
                     buttons: [
-                      { text: locale.getString('shop.button_shop_more') },
-                      {
-                          text: locale.getString('shop.button_go_to_cart'),
-                          type: 'button-positive',
-                          onTap: function (e) {
-                              $ionicTabsDelegate.select(2);
-                              $state.go('app.menu.cart.home', {}, { reload: true });
-                          }
-                      }
+                        { text: locale.getString('shop.button_shop_more') },
+                        {
+                            text: locale.getString('shop.button_go_to_cart'),
+                            type: 'button-positive',
+                            onTap: function (e) {
+                                $ionicTabsDelegate.select(2);
+                                $state.go('app.menu.cart.home', {}, { reload: true });
+                            }
+                        }
                     ]
                 });
 
@@ -400,23 +400,23 @@ angular
 
 
 /**
-* @ngdoc controller
-* @name shop.module.controller:ShopCategoryCtrl
-* @requires $scope
-* @requires $rootScope
-* @requires $stateParams
-* @requires $state
-* @requires ShopService
-* @description
-* Lists products of a selected category.
-*/
+ * @ngdoc controller
+ * @name shop.module.controller:ShopCategoryCtrl
+ * @requires $scope
+ * @requires $rootScope
+ * @requires $stateParams
+ * @requires $state
+ * @requires ShopService
+ * @description
+ * Lists products of a selected category.
+ */
 angular
     .module('shop.module')
     .controller('ShopCategoryCtrl', function ($scope, $rootScope, $stateParams, $state, ShopService) {
         var vm = this;
 
-		$scope.id = $stateParams.id;
-		
+        $scope.id = $stateParams.id;
+
         if (!$stateParams.id) {
             $state.go('app.menu.shop.home');
         }
@@ -455,11 +455,11 @@ angular
                     $scope.endOfItems = true;
                 $scope.loadingItems = false;
                 $scope.$broadcast('scroll.infiniteScrollComplete');
-				$scope.$broadcast('scroll.refreshComplete');
+                $scope.$broadcast('scroll.refreshComplete');
             }, function (data) {
                 $scope.loadingItems = false;
                 $scope.$broadcast('scroll.infiniteScrollComplete');
-				$scope.$broadcast('scroll.refreshComplete');
+                $scope.$broadcast('scroll.refreshComplete');
             });
         }
 
@@ -468,7 +468,7 @@ angular
                 $scope.loadItems();
             } else {
                 $scope.$broadcast('scroll.infiniteScrollComplete');
-				$scope.$broadcast('scroll.refreshComplete');
+                $scope.$broadcast('scroll.refreshComplete');
             }
         }
 
@@ -477,19 +477,19 @@ angular
 
 
 /**
-* @ngdoc controller
-* @name shop.module.controller:ShopSearchCtrl
-* @requires $scope
-* @requires $rootScope
-* @requires $ionicScrollDelegate
-* @requires $stateParams
-* @requires ShopService
-* @description
-* Search page shows a search input box and filters the product catalog for the customer entered
-* keywords.
-*/
+ * @ngdoc controller
+ * @name shop.module.controller:ShopSearchCtrl
+ * @requires $scope
+ * @requires $rootScope
+ * @requires $ionicScrollDelegate
+ * @requires $stateParams
+ * @requires ShopService
+ * @description
+ * Search page shows a search input box and filters the product catalog for the customer entered
+ * keywords.
+ */
 angular
     .module('shop.module')
     .controller('ShopSearchCtrl', function ($scope, $rootScope, $ionicScrollDelegate, $stateParams, ShopService) {
-        
+
     });
