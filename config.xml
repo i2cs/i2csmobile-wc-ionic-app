@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.i2cs.mobile.stopstore" version="1.7.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" android-versionCode="1740">
-  <name>i2CSMobile Woocommerce</name>
-  <description>i2cs mobile app demo for Woocommerce backend</description>
-  <author email="poosathecat@gmail.com">i2cs solutions</author>
+  <name>stopstore</name>
+  <description>Store Store</description>
+  <author email="sales@i2csmobile.com">i2CS, Inc</author>
   <content src="index.html"/>
   <access origin="*"/>
   <allow-intent href="*"/>
