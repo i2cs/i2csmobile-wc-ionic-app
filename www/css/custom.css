@@ -45,6 +45,9 @@
     height:70%;
 }
 
+.button {
+    background-color: #F68A2C;
+}
 .item-complex.item-icon-right .item-content {
     padding-right: 12px;
 }
