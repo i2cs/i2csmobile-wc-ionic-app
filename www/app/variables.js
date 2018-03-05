@@ -2,10 +2,10 @@ angular.module('starter')
     //.constant('BASE_URL', 'http://localhost/wordpress')
     //.constant('BASE_API_URL', 'http://localhost/wordpress/wp-json/i2cs/v1')
 
-    .constant('BASE_URL', 'http://saasthara.com/i2cs/shops/woocommerce/')
-    .constant('BASE_API_URL', 'http://saasthara.com/i2cs/shops/woocommerce/wp-json/i2cs/v1')
+    .constant('BASE_URL', 'https://saasthara.com/i2cs/shops/woocommerce/')
+    .constant('BASE_API_URL', 'https://www.9aydaly.com/wp-json/i2cs/v1')
 
-    .constant('WEBSITE', 'http://saasthara.com/i2cs/shops/woocommerce/')
+    .constant('WEBSITE', 'https://www.9aydaly.com')
     .constant('FORGOT_LINK', 'http://saasthara.com/i2cs/shops/woocommerce/my-account/lost-password/')
     .constant('EMAIL', 'i2cssolutions@gmail.com')
     .constant('PHONE', '0712966650')
