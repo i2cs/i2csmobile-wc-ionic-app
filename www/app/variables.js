@@ -45,7 +45,7 @@ angular.module('starter')
             }
     ])
     .constant('RTL_LANGUAGES', ['ar'])
-    .constant('CURRENCY_SYMBOL', '$')
+    .constant('CURRENCY_SYMBOL', 'د.ك')
     .constant('DATE_FORMAT', "MM/dd/yyyy h:mma")
     .constant('MAIN_PRMO_BANNER_ID', 112)
     .constant('MAIN_OFFERS_BANNER_ID', 103)
