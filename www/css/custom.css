@@ -34,25 +34,28 @@
     top: 8px;
 }
 
-.item-input input{
+.item-input input {
     padding-right: 2px;
 }
+
 .card .item.item-input input, .list-inset .item.item-input input, .padding-horizontal > .list .item.item-input input, .padding > .list .item.item-input input {
     padding-right: 2px;
 }
+
 .full-image {
     width: 100%;
-    height:70%;
+    height: 60%;
 }
 
 .button {
     background-color: #F68A2C;
 }
+
 .item-complex.item-icon-right .item-content {
     padding-right: 12px;
 }
 
-.seemore{
+.seemore {
     height: 40px;
 }
 
@@ -63,4 +66,32 @@
 
 .button.button-full {
     margin-right: -5px;
+}
+
+.bar.bar-assertive{
+    background: #F68A2C none;
+    border-color: #F68A2C;
+}
+
+.button.button-balanced {
+    background-color: #2E3B4E
+}
+
+.bar-assertive .button {
+    background: #F68A2C none;
+}
+
+.bar.bar-assertive.bar-footer{
+    background: #F68A2C none;
+}
+.bar-assertive .button {
+    border-color: transparent;
+    background-color: #F68A2C;
+    color: #fff;
+}
+
+.bar-assertive .button.activated {
+    border-color: transparent;
+    background-color: #F68A2C;
+    color: #fff;
 }

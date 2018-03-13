@@ -8,22 +8,19 @@ angular.module('starter')
     .constant('WEBSITE', 'https://www.stop-store.com')
     .constant('FORGOT_LINK', 'http://saasthara.com/i2cs/shops/woocommerce/my-account/lost-password/')
     .constant('EMAIL', 'i2cssolutions@gmail.com')
-    .constant('PHONE', '0712966650')
+    .constant('PHONE', '+965-98860502es')
     .constant('ANALYTICS_ID', 'UA-79548648-1')
     .constant('COUPONS_ENABLED', true)
     .constant('STATUSBAR_COLOR', "#387ef5")
 	.constant('LANGUAGES', [
-            { name: "English", language_id: "en-US" },
-            { name: "French", language_id: "fr-FR" },
-            { name: "Chinese", language_id: "zh-CN" },
-	        { name: "Arabic", language_id: "ar-EG" }])
+	        { name: "ar", language_id: "ar-EG" }])
     .constant('WELCOME_SLIDES', [])
     .constant('RTL_LANGUAGES', ['ar'])
     .constant('CURRENCY_SYMBOL', 'د.ك')
     .constant('DATE_FORMAT', "MM/dd/yyyy h:mma")
-    .constant('MAIN_PRMO_BANNER_ID', 112)
-    .constant('MAIN_OFFERS_BANNER_ID', 103)
-    .constant('OFFERS_PAGE_BANNER_ID', 103)
+    .constant('MAIN_PRMO_BANNER_ID', 595)
+    .constant('MAIN_OFFERS_BANNER_ID', 600)
+    .constant('OFFERS_PAGE_BANNER_ID', 604)
     .constant('INTERCOM_INTEGRATION', false) // please check www/app/common/services/intercom.service.js
     .constant('ONESIGNAL_APP_ID', "9302072d-783a-41f4-b3dc-80359f64ef96") // get OneSignal app id from http://onesignal.com
     .constant('GCM_SENDER_ID', "1037766790597")
