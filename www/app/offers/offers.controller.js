@@ -21,7 +21,9 @@ angular
 
         $scope.loadOfferBanners = function () {
             OffersService.GetOfferBanners(OFFERS_PAGE_BANNER_ID).then(function (data) {
-                $scope.items = data;
+                $scope.items = data.filter(function(a){
+                    return a.image != "";
+                });
             });
         }
         

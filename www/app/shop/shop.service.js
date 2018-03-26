@@ -161,6 +161,10 @@ angular
         this.GetBannerById = function (banner_id) {
             return dataService.apiSecuredGet('/store/banner', { id: banner_id }).then(function (data) {
                 if (data) {
+                    data = data.filter(function(a){
+                        return a.image != "";
+                    });
+
                     return data;
                 } else {
                     return $q.reject(data);
@@ -202,7 +206,7 @@ angular
          * @returns {promise} Returns a promise of the API call.
          */
         this.GetCategories = function (id) {
-            return dataService.apiSecuredGet('/products/categories', {parent:id}).then(function (data) {
+            return dataService.apiSecuredGet('/products/categories', {parent:id, per_page : 100 }).then(function (data) {
 
                 for (var i in data) {
                     data[i].categories = [];
@@ -262,6 +266,7 @@ angular
             "parent": 11,
             "description": "",
             "display": "default",
+
             "image": [],
             "menu_order": 0,
             "count": 4

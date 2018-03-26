@@ -22,11 +22,12 @@ angular
 
         // sync form input to localstorage
         $localStorage.home = {};
-        $scope.data = $localStorage.home;
+        $scope.data = {};
+        $scope.slides = {};
         $scope.data.latestPage = 1;
 
-        if (!$scope.data.slides)
-            $scope.data.slides = [{ image: "app/shop/images/slide.png" }];
+        if (!$scope.slides)
+            $scope.slides = [{ image: "app/shop/images/slide.png" }];
 
         $scope.refreshUI = function () {
             $scope.data.latestPage = 1;
@@ -38,12 +39,12 @@ angular
 
         $scope.loadBanners = function () {
             ShopService.GetBannerById(MAIN_PRMO_BANNER_ID).then(function (data) {
-                $scope.data.slides = data;
+                $scope.slides = data;
                 $ionicSlideBoxDelegate.update();
             });
 
             ShopService.GetBannerById(MAIN_OFFERS_BANNER_ID).then(function (data) {
-                $scope.data.offers = data;
+                $scope.offers = data;
                 $ionicSlideBoxDelegate.update();
             });
         }
@@ -246,10 +247,10 @@ angular
                 }
             }
 
-            if (!nonSelectedOptions && !$scope.cart.variation) {
-                $scope.cart.options[id] = null;
-                alert(locale.getString('shop.no_combinations_found'));
-            }
+            // if (!nonSelectedOptions && !$scope.cart.variation) {
+            //     $scope.cart.options[id] = null;
+            //     alert(locale.getString('shop.no_combinations_found'));
+            // }
         }
 
         $scope.openRingSizeGuide = function () {

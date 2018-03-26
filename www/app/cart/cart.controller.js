@@ -111,7 +111,9 @@ angular
         $scope.items = [];
         $scope.card = {};
         $scope.cart = {};
-
+        $scope.checkout.city = "-";
+        $scope.checkout.postal_code = "-";
+        
         $scope.$on('$ionicView.enter', function () {
             $scope.checkout.personaInfo = 3;
 
