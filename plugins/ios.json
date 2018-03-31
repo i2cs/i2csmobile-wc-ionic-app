@@ -1,69 +1,65 @@
 {
-  "prepare_queue": {
-    "installed": [],
-    "uninstalled": []
-  },
-  "config_munge": {
-    "files": {}
-  },
-  "installed_plugins": {
-    "cordova-plugin-app-event": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
     },
-    "cordova-plugin-app-version": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+    "config_munge": {
+        "files": {}
     },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+    "installed_plugins": {
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "cordova-plugin-app-version": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "cordova-plugin-geolocation": {
+            "GEOLOCATION_USAGE_DESCRIPTION": " ",
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "cordova-plugin-google-analytics": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "ionic-plugin-deploy": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "onesignal-cordova-plugin": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        }
     },
-    "cordova-plugin-device-orientation": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    },
-    "cordova-plugin-geolocation": {
-      "GEOLOCATION_USAGE_DESCRIPTION": " ",
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    },
-    "cordova-plugin-google-analytics": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    },
-    "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    },
-    "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    },
-    "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    },
-    "cordova-plugin-x-socialsharing": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    },
-    "ionic-plugin-deploy": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    },
-    "ionic-plugin-keyboard": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    },
-    "onesignal-cordova-plugin": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    },
-    "phonegap-plugin-push": {
-      "SENDER_ID": "85075801930",
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
+        }
     }
-  },
-  "dependent_plugins": {
-    "cordova-plugin-compat": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    },
-    "cordova-plugin-console": {
-      "PACKAGE_NAME": "com.i2cs.mobile.stopstore"
-    }
-  }
 }
