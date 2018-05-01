@@ -23,7 +23,7 @@ angular.module('starter')
     .constant('OFFERS_PAGE_BANNER_ID', 263)
     .constant('INTERCOM_INTEGRATION', false) // please check www/app/common/services/intercom.service.js
     .constant('ONESIGNAL_APP_ID', "4e059bb1-952e-47f0-9f8b-4a4b13171b06") // get OneSignal app id from http://onesignal.com
-    .constant('GCM_SENDER_ID', "1037766790597")
+    .constant('GCM_SENDER_ID', "494942758422")
     .constant('MENU_LAYOUT', "tabs")
 
     // if demo mode is set to true, some dynamic configurations 
