@@ -1,9 +1,8 @@
 /* custom css goes here */
 @font-face {
-    font-family: "DroidKufi";
-    src: url("fonts/DroidKufi-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
+    color: #000;
 }
 
 .justify-product-button {
@@ -34,16 +33,17 @@
     top: 8px;
 }
 
-.item-input input{
+.item-input input {
     padding-right: 2px;
 }
+
 .card .item.item-input input, .list-inset .item.item-input input, .padding-horizontal > .list .item.item-input input, .padding > .list .item.item-input input {
     padding-right: 2px;
 }
 
 .full-image {
     width: 100%;
-    height:70%;
+    height: 70%;
 }
 
 .item-complex.item-icon-right .item-content {
@@ -59,3 +59,39 @@
     margin-right: -5px;
 }
 
+.icon {
+    color: #000000;
+}
+
+.tab-title {
+    color: #000000;
+}
+
+.bar.bar-positive .title {
+    color: #000000;
+}
+
+.button {
+    background-color: #F7CE02;
+    color: #000;
+}
+
+.previous-title {
+    color: #000000;
+}
+
+a .button {
+    color: #000;
+}
+
+.button.button-positive {
+    color: #000;
+}
+
+.button.button-balanced {
+    color: #000;
+}
+
+.bar-positive .button{
+    color: #000000;
+}

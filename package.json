@@ -42,6 +42,11 @@
     "onesignal-cordova-plugin@2.0.3"
   ],
   "cordovaPlatforms": [
-    "android"
+    "ios",
+    {
+      "platform": "android",
+      "version": "5.1.1",
+      "locator": "android@5.1.1"
+    }
   ]
 }
