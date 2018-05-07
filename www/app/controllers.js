@@ -416,6 +416,7 @@ angular.module('starter')
             animation: 'slide-in-up'
         }).then(function (modal) {
             $scope.registerModal = modal;
+            $scope.register.postcode = "-";
         });
 
         $rootScope.openRegisterModal = function () {

@@ -12,7 +12,7 @@
             </ion-slide>
         </ion-slide-box>
 
-        <category-list thumbnail="true" mode="vertical" category="0"></category-list>
+        <category-list thumbnail="true" mode="icons" category="0"></category-list>
 
         <ion-slide-box show-pager="false" class="home-slider" does-continue="true" auto-play="true">
             <ion-slide ng-repeat="slide in data.offers">
@@ -35,7 +35,7 @@
 
         <div class="item item-divider item-button-right">
             <span i18n="shop.latest_title"></span>
-            <button class="button button-stable button-outline button-no-outline" ng-init="grid_mode = true" ng-click="grid_mode = !grid_mode">
+            <button class="button button-stable button-outline button-no-outline" ng-init="grid_mode = false" ng-click="grid_mode = !grid_mode">
                 <i class="icon" ng-class="{'ion-ios-grid-view-outline' : grid_mode, 'ion-ios-list-outline': !grid_mode}"></i>
             </button>
         </div>
