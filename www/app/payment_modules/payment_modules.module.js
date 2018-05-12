@@ -14,4 +14,4 @@ angular.module('payments.module', ['ui.router', 'stripe.module']);
 ```
 *
 **/
-angular.module('payments.module', ['ui.router', 'stripe.module', 'paypal.module']);
+angular.module('payments.module', ['ui.router', 'stripe.module', 'paypal.module', 'myfatoorah.module']);
