@@ -49,14 +49,16 @@
                         <input type="text" data-i18n-attr="{placeholder: 'cart.order_city'}" ng-model="checkout.city" name="city" required>
                     </label>
                 </div>
-                <div class="row no-padding item item-double-col">
-                    <label class="item item-input item-select col-50">
+                <div class="row no-padding item">
+                    <label class="item item-input item-select row">
                         <div class="input-label" i18n="cart.order_country"></div>
                         <select ng-model="checkout.country_id" ng-change="countryChanged()" name="country_id" ng-init="countryChanged()" required>
                             <option value="{{::country_id}}" ng-selected="country_id == checkout.country_id" ng-repeat="(country_id, country_name) in data.shipping_countries">{{::country_name}}</option>
                         </select>
                     </label>
-                    <label class="item item-input col-50" ng-class="{'item-select' : states}" ng-class="{'item-floating-label' : !states}">
+                </div>
+                <div class="row no-padding item">
+                    <label class="item item-input row" ng-class="{'item-select' : states}" ng-class="{'item-floating-label' : !states}">
                         <div class="input-label" i18n="cart.order_region"></div>
                         <input ng-if="!states" type="text" ng-model="checkout.state" name="state" required>
                         <select ng-if="states" ng-model="checkout.state" name="state" required>

@@ -45,6 +45,5 @@
   "button_shop_more": "تسوق أكثر",
   "button_go_to_cart": "الذهاب إلى السلة",
   "warning_options_missing": "عفوا! حدد الخيارات التالية",
-  "error_cant_add_to_cart" : "خطأ. لا يمكن إضافة إلى العربة",
-  "no_combinations_found": "آسف! مجموعة مختارة غير متوفرة"
+  "error_cant_add_to_cart" : "خطأ. لا يمكن إضافة إلى العربة"
 }

@@ -14,7 +14,7 @@
     "empty_message": "عربة التسوق فارغة!",
     "product_code": "رمز المنتج: {code}",
     "delivery_method": "طريقة التوصيل",
-    "payment_method": "طريقة الدفع او السداد",
+    "payment_method": "يرجى اختيار طرق الدفع والسداد",
     "comments_section": "تعليق إضافية / تعليمات",
     "comments": "تعليقات / تعليمات",
     "invoice_address": "عنوان",
