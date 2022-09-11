@@ -1,5 +1,5 @@
-##Quick Start
-###A guide to quickly set up and running the i2CSMobile app
+## Quick Start
+### A guide to quickly set up and running the i2CSMobile app
 
 This guide will explain you how to setup the app quickly using an ionic starter template. Extract the content of the downloaded zip file. The package contains two folders for `ionic` app and `woocommerce` module. Open your CMD or terminal and navigate to the place where you would like your project to be initialized (Ex. `C:\projects\`).
 ```
@@ -13,13 +13,13 @@ I2CSMOBILE_PACKAGE
 
 This product is based on ionic platform. You have to install ionic CLI if you haven't done it yet. Please refer to [Installing the CLI globally](http://ionicframework.com/docs/cli/install.html)
 
-####1. CREATE AN APP
+#### 1. CREATE AN APP
 ```
 ionic start myapp "C:\I2CSMOBILE_PACKAGE\ionic\starter\www"
 cd myapp
 ```
 
-####2. INSTALL DEPENDENCIES
+#### 2. INSTALL DEPENDENCIES
 
 ```
 ionic plugin add cordova-plugin-device@1.1.1
@@ -45,15 +45,15 @@ if you want intercom.io integration
 ionic plugin add cordova-plugin-intercom@3.0.11
 ```
 
-####3. INIT THE IONIC PROJECT
+#### 3. INIT THE IONIC PROJECT
 ```
 ionic io init
 ```
-####4. ADD PLATFORMS
+#### 4. ADD PLATFORMS
 ```
 ionic platform add android
 ```
-####5. BUILD IT FOR A PLATFORM OR SEE IT IN BROWSER 
+#### 5. BUILD IT FOR A PLATFORM OR SEE IT IN BROWSER 
 
 You can build the apk with following command. Make sure you have installed Android SDK on your computer before running this.
 ```
